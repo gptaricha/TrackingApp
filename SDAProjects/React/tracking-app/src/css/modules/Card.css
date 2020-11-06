@@ -1,0 +1,17 @@
+.card {
+  box-sizing: border-box;
+  margin: 0 auto 24px auto;
+  user-select: none;
+  cursor: auto;
+}
+
+.card .thumbnail {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 900px) {
+  .card .meta-data {
+    padding: 0;
+  }
+}
