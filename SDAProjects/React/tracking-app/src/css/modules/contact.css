@@ -1,0 +1,23 @@
+  .contact li {
+    list-style-type: none;
+    display: inline-flex;
+    
+  }
+  .contact a {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color:goldenrod;
+    color: red;
+  }
+  
+  .contact i {
+    margin-right: 20px;
+  }
+  
+  .contact a:hover {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    border: solid var(--space-smaller) coral;
+  }
+  

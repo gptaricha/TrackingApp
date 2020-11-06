@@ -1,53 +1,38 @@
 // React core
 import React, { useState } from "react";
-import Header from './Header';
 
-import parcelTrackInfo from '../parcel.json';
+//Components
+import Header from './Header';
+import FooterDetails from './FooterDetails';
+import background1 from '../assets/images/background1.gif';
+import trackinglogo from '../assets/images/trackinglogo.png';
+import logo1 from '../assets/images/logo1.png';
 
 // Components
 import Card from "./Card";
+import Forms from './Forms';
 
 export default function HomePage({ parcelinfo }) {
-  
-  const[searchKeyword, setSearchKeyword] = useState("");
-  const handleChangeSearch = (e) => {
-      setSearchKeyword(e.target.value);
-  }
+  console.log("parcel info is: ");
+  console.log(parcelinfo);
 
-  const filteredList = (data) => {
-    data = data.filter((eachData) =>{
-      return eachData.status.toLowerCase().indexOf(searchKeyword) >-1;
-    })
-    return data.map((trackInfo) => {
-      return (
-        <li>{trackInfo.staus}</li>
-      )
-    })
-  }
-  
-  // We render multiple components using map function
-  const Cards = parcelinfo.map((info) => {
-    return <Card key={info.id} data={info} />;
-  });
-
-  
   const [query, setQuery] = useState("");
+  
   return (
-    <div className="home-page">
+    <div className="HomePage">
       <Header />
-      <section className="recomended">
-        <h2>Welcome to DHL tracking App</h2>
-        <input classname="search"
-            name="searchKeyword"
-            placeholder="Parcel ID"
-            value={searchKeyword}
-            onChange={handleChangeSearch} 
-        />
-        {filteredList(parcelTrackInfo)}
-            {/* <Link to={`Cards`}>Search</Link> */}
-         <div className="grid">{Cards}</div> 
-        )
+      <section className="container">
+      <img src={trackinglogo} title = "DHL truck" alt="A yellow DHL truck moving on the road" />
+          < Forms setQuery={setQuery}/>
+          <p/>
+          <Card searchBy={ query } key={parcelinfo.id} data ={parcelinfo}/>
+        
+         {/* <div className="grid">{Cards}</div>  */}
+        
       </section>
+      
+      <FooterDetails />
     </div>
+    
   );
 }

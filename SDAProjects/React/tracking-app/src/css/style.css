@@ -26,8 +26,8 @@ Class naming:
 @import url('./modules/Header.css');
 @import url('./modules/meta-data.css');
 @import url('./modules/search-bar.css');
+@import url('./modules/contact.css');
 
 /* Components */
-@import url('./components/button.css');
 @import url('./components/horizonal-rule.css');
 @import url('./components/typography.css');

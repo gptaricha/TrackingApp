@@ -1,5 +1,7 @@
-// import Components
+// import React
 import React, { useEffect, useState } from 'react';
+
+// import Components
 import HomePage from './component/HomePage';
 import './css/style.css';
 
@@ -16,8 +18,6 @@ function App() {
       try {
         const response = await fetch(endpoint, { mode: "cors" });
         const data = await response.json();
-        console.log("inside use effect");
-        console.log(data); 
         setInformation(data);
         setStatus(1);
         //If there is data update it
@@ -35,7 +35,6 @@ function App() {
   return (
     <div >
        <div className="home">
-         <h1>React fetch {status}</h1>
          { status === 0 ? <p> Loading... </p>: null}
          { status === 1 ? <HomePage parcelinfo={information}/> : null}
          { status === 11 ? <HomePage parcelinfo={[information[8]]}/> : null}
