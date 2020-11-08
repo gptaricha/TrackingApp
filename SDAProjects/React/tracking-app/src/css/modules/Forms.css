@@ -1,0 +1,19 @@
+.Forms {
+  font-size: small;
+  margin-left: 5px;
+}
+
+.Forms .search-bar {
+    background-color:whitesmoke;
+    color: black;
+    padding: 8px;
+    font-size: 14px;
+    border: solid 0.5px #828282;
+  }
+
+  @media(min-width:1000px) {
+    .Forms {
+      font-size: large;
+      margin-left: 30px;
+    }
+  }

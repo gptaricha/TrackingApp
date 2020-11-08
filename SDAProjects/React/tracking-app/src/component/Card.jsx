@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-//Training wheels 
- <link href="http://sdaproject.se/training-wheels.css" rel="stylesheet" />
+import React from "react";
 
-export default function Card({ searchBy, data }) {
+export default function Card({ searchBy, parcels }) {
     console.log('inside card');
-    
-    let parcel = data.filter(e => e.id === searchBy)[0];
+    if(searchBy === '') {
+        return null;
+    } else 
+        console.log("You have a value");
 
-    if(parcel == null)
-        return <h3>Searching for your parcel {searchBy}. . .</h3>;
+    let filteredParcel = parcels.filter(e => e.id === searchBy)[0];
 
-    const {id, status, location_name, eta,last_updated, sender,notes, user_name, user_phone} = parcel;
+    if(filteredParcel == null)
+        return <h4>Incorrect parcel id {searchBy}. Please try again</h4>;
+
+    const {id, status, location_name, eta,last_updated, sender,notes, user_name, user_phone} = filteredParcel;
 
     return (
         <article className="card"> 

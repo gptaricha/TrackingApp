@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 h1 {
+  border-top: solid 0.5px lightgray;
   letter-spacing: -0.5px; 
   text-align: center;
   color: maroon;
@@ -8,5 +9,5 @@ h1 {
 
  p {
   margin-top: 0;
-  margin-left: 25px;
+  padding-left: 2px;
 }

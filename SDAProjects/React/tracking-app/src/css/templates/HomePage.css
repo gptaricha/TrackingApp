@@ -1,25 +1,77 @@
 .HomePage {
-  width: 100%; /* 100vh forces to cover the screen. 100% only cover the screen if there is a lot of content. */
+  width: 100%; 
   background-color: lightgoldenrodyellow;
   height: 100%;
 }
 
 .HomePage .container {
   padding-top: 2px;
- 
-}
-
-.HomePage .container .title {
-  padding-left: 8px;
-  margin-bottom: 16px;
-  font-size: 20px;
-  letter-spacing: -0.75px;
+  display: grid;
+  grid-template-columns: 1fr ;
 }
 
 .HomePage .container img{
   vertical-align: -webkit-baseline-middle;
   float: right;
- 
-  
+  margin-right: 10px;
+  height: 200px;
 }
 
+@media (min-width:490px) {
+  .HomePage .container {
+    height: 100%;
+    width: 100%;
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    
+  }
+  .HomePage .container img{
+    vertical-align: -webkit-baseline-middle;
+    float: right;
+    margin-right: 50px;
+    height: 300px;
+  }
+}
+@media (min-width:600px) {
+  .HomePage .container {
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+  }
+  .HomePage .container img{
+    vertical-align: -webkit-baseline-middle;
+    float: right;
+    margin-right: 50px;
+    width: 300px;
+  }
+}
+@media (min-width:1000px) {
+  .HomePage .container {
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+  }
+  .HomePage .container img{
+    vertical-align: -webkit-baseline-middle;
+    float: right;
+    margin-right: 10px;
+    width: 700px;
+    height: 700px;
+  }
+}
+
+@media (min-width:2000px) {
+  .HomePage .container {
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+  }
+  .HomePage .container img{
+    vertical-align: -webkit-baseline-middle;
+    float: right;
+    margin-right: 10px;
+    width: 1700px;
+    height: 1400px;
+  }
+}

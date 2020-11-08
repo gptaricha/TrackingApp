@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div >
-       <div className="home">
+       <div className="HomePage">
          { status === 0 ? <p> Loading... </p>: null}
          { status === 1 ? <HomePage parcelinfo={information}/> : null}
          { status === 11 ? <HomePage parcelinfo={[information[8]]}/> : null}
