@@ -22,7 +22,7 @@ export default function Contact() {
                 DHL Facebook</a>
         </li>
         <li> <FaInstagramSquare/>
-            <a href = "http://tiny.cc/hc81tz"> Instagram
+            <a href = "https://www.instagram.com/dhl_global/?hl=enz"> Instagram
             </a>
         </li>
     </ul>

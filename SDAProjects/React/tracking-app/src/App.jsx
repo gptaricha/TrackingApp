@@ -25,7 +25,6 @@ function App() {
       }
       catch {
         //handle error
-        console.log("error");
         setStatus(2);
       }
     }
